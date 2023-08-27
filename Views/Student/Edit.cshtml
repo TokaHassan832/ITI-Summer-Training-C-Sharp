@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditStudent</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <form method="post">
+        <label>Student Name</label>
+        <input type="text" name="Name" value="@Model.Name" /> <br />
+        <label>Student Age</label>
+        <input type="text" name="Age" value="@Model.Age" /> <br />
+        <select name="DeptNo">
+            @foreach (var item in ViewBag.departments)
+            {
+                <option value="@item.Id"> @item.Name</option>
+            }
+        </select>
+        <input type="submit" value="update" class="btn btn-danger" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Student>
+@{
+    Layout = "~/views/shared/_layout2.cshtml";
+    ViewBag.Title = "Student List";
+}
+
+
+
+    <a href="/student/create" class="btn btn-success">Create</a>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>Operation</th>
+            </tr>
+        </thead>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+                <td>@item.Department?.Name</td>
+                <td>
+                    <a href="/student/details/@item.Id" class="btn btn-info">Details</a>
+                    <a href="/student/edit/@item.Id" class="btn btn-warning">Edit</a>
+                    <a href="/student/delete/@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+

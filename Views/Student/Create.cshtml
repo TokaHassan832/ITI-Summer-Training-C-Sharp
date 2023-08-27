@@ -1,0 +1,41 @@
+﻿@model Student
+@{
+    Layout = "~/views/shared/_layout2.cshtml";
+    ViewBag.Title = "Create Student";
+}
+
+
+    <form method="post">
+        <label>Student Name</label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+        <br />
+        <label>Student Age</label>
+        <input asp-for="Age" />
+        <span asp-validation-for="Age"></span>
+         <br />
+        <label>Student Email</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+        <br />
+        <label asp-for="Password"></label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+        <br />
+        <label asp-for="CPassword"></label>
+        <input asp-for="CPassword" />
+        <span asp-validation-for="CPassword"></span>
+        <br />
+
+        <label>Department Name</label>
+        <select name="DeptNo" asp-for="DeptNo" asp-items="ViewBag.departments">
+            <option>Select Department</option>
+        </select>
+        <span asp-validation-for="DeptNo"></span>
+        <br />
+        <input type="submit" value="add" class="btn btn-danger"/>
+    </form>
+    @section scripts{
+    <script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    }

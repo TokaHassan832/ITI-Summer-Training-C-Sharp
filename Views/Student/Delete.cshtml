@@ -1,0 +1,15 @@
+﻿@model Student
+@{
+    Layout = "~/views/shared/_layout2.cshtml";
+    ViewBag.Title = "Delete Student";
+}
+
+    <div class="alert alert-danger">
+    Are you sure delete student
+    @Model.Id : @Model.Name : @Model.Age
+    </div>
+    <form method="post">
+        <input type="submit" value="delete student" class="btn btn-danger"/>
+    </form>
+    <a href="/student/index" class="btn btn-primary" >Back</a>
+
