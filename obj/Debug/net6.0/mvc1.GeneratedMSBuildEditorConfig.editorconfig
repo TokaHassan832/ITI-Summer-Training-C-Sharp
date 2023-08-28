@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\tokah\source\repos\mvc1
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/tokah/source/repos/mvc1/Views/Course/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tokah/source/repos/mvc1/Views/Course/Display.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXERpc3BsYXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/tokah/source/repos/mvc1/Views/Department/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

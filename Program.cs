@@ -13,7 +13,15 @@ namespace mvc1
 
             builder.Services.AddSingleton<IStudent, StudentBLL>();
 
+            builder.Services.AddSession();
+
             var app = builder.Build();
+
+            /*app.Run(async context =>
+            {
+                await context.Response.WriteAsync("Hello World !");
+            });
+            */
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -28,11 +36,13 @@ namespace mvc1
 
             app.UseRouting();
 
+            app.UseSession();
+
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Student}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }
